@@ -10,11 +10,11 @@ if (!isset($_SESSION['loggedin'])) {
 include "../Backend/db_connect.php"; 
 
 // Get user info from DB
-$stmt = $conn->prepare('SELECT password, email FROM faculty WHERE id = ?');
+$stmt = $conn->prepare('SELECT password, email, department FROM faculty WHERE id = ?');
 // In this case we can use the account ID to get the account info.
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
-$stmt->bind_result($password, $email);
+$stmt->bind_result($password, $email, $department);
 $stmt->fetch();
 $stmt->close();
 ?>
@@ -53,8 +53,8 @@ $stmt->close();
 						<td><?=$email?></td>
 					</tr>
                     <tr>
-						<td>Attended</td>
-						<td>Will add from database</td>
+						<td>department</td>
+						<td><?=$department?></td>
 					</tr>
                     <tr>
 						<td>Next Meeting</td>
