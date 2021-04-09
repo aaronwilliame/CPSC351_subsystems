@@ -1,0 +1,18 @@
+header {display:block;
+		background-color:#F8F8FF;}
+
+body {background-color:#DCDCDC;
+color:#000000;}
+
+
+
+nav {display:block;
+	background-color:#64954ED;
+	text-align:center;
+	font-weight:bold;}
+nav a { text-decoration: none; }
+nav a:link { color: #000000; }
+nav a:visited { color: #8B0000; }
+nav a:hover { color: #F5F5DC; }
+nav ul { list-style-type: none;
+       padding-left: 0; }

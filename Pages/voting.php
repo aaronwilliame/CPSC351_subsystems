@@ -40,5 +40,14 @@ $stmt->close();
 			<h2>Voting</h2>
 			<p>This is the voting page, <?=$_SESSION['name']?>!</p>
 		</div>
+		
+	<input type="text" name="vote" list="nominations"><!--need to link to database-->
+		<datalist id="names">
+			<option value="first">
+			<option value="second">
+			<option value="third">
+		</datalist>
+	
+	
 	</body>
 </html>
