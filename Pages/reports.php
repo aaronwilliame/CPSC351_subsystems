@@ -30,7 +30,7 @@ $stmt->close();
 			<div>
             <h1>UFOC</h1>
                 <a href="home.php">Home</a></li>
-				<a href="reports.php"><i class="fas fa-user-circle"></i>Reports</a>
+				<a href="reports.php"><i class="fas fa-user-circle"></i>Accounts</a>
 				<a href="nominates.php"><i class="fas fa-sign-out-alt"></i>Nominate</a>
 		        <a href="voting.php">Voting</a></li>
                 <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
