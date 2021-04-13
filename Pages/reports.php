@@ -64,21 +64,6 @@ $stmt->close();
 				</table>
 			</div>
 		</div>
-		<div>
-	<label for ="formname">Form Name:</label>
-	<input type="text" id="formname" name="formname" required="required">
-	<label for="myfile">Select a file:</label>
-	<input type="file" id="myfile" name="myfile" required="required">
-	<label for ="comments">Comments:</label>
-	<textarea id="comments" name="comments" rows="5" cols="25"></textarea>
-	<input type="submit" value="Submit">
-	</form>
-	</div>
-	<?php
-	$formname = $_POST["formname"];
-	$myfile = $_POST["myfile"];
-	$book = $_POST["book"];
-	$comments = $_POST["comments"];
-	?>
+	
 	</body>
 </html>
