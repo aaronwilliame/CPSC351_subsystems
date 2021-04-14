@@ -22,7 +22,8 @@ if (!isset($_SESSION['loggedin'])) {
 			<div>
 				<h1>UFOC</h1>
                 <a href="home.php"><i class="fas fa-user-circle"></i>Home</li>
-				<a href="reports.php"><i class="fas fa-user-circle"></i>Reports</a>
+				<a href="account.php"><i class="fas fa-user-circle"></i>Account</a>
+				<a href="reports.php"><i class="fas fa-user-circle"></i>Reports</li>
 				<a href="nominates.php"><i class="fas fa-sign-out-alt"></i>Nominate</a>
 		        <a href="voting.php"><i class="fas fa-user-circle"></i>Voting</li>
                 <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>

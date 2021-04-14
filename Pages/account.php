@@ -28,10 +28,12 @@ $stmt->close();
 	<body class="loggedin">
 		<nav class="navtop">
 			<div>
-            <h1>UFOC</h1>
-                <a href="home.php">Home</a></li>
-				<a href="reports.php"><i class="fas fa-user-circle"></i>Reports</a>
-		        <a href="voting.php">Voting</a></li>
+				<h1>UFOC</h1>
+                <a href="home.php"><i class="fas fa-user-circle"></i>Home</li>
+				<a href="account.php"><i class="fas fa-user-circle"></i>Account</a>
+				<a href="reports.php"><i class="fas fa-user-circle"></i>Reports</li>
+				<a href="nominates.php"><i class="fas fa-sign-out-alt"></i>Nominate</a>
+		        <a href="voting.php"><i class="fas fa-user-circle"></i>Voting</li>
                 <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
 		</nav>
@@ -58,28 +60,11 @@ $stmt->close();
 					</tr>
                     <tr>
 						<td>Next Meeting</td>
-						<td><?=?meeting?></td>
+						<td>BLAH BLAH BLAHHHH</td>
 					</tr>
 				</table>
 			</div>
 		</div>
-	<form>
-	<label for ="formname">Form Name:</label>
-	<input type="text" id="formname" name="formname" required="required">
-	<label for="myfile">Select a file:</label>
-	<input type="file" id="myfile" name="myfile" required="required">
-	<label for ="comments">Comments:</label>
-	<textarea id="comments" name="comments" rows="5" cols="25"></textarea>
-	<input type="submit" value="Submit">
-	</form>
-
-	<?php
-	$formname = $_POST["formname"];
-	$myfile = $_POST["myfile"];
-	$book = $_POST["book"];
-	$comments = $_POST["comments"];
-	?>
-	
 	
 	</body>
-	 
+</html>
