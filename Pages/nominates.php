@@ -30,10 +30,11 @@ $stmt->close();
 	<body class="loggedin">
         <!--NAV BAR HERE-->
 		<nav class="navtop">
-			<div>
+            <div>
 				<h1>UFOC</h1>
                 <a href="home.php"><i class="fas fa-user-circle"></i>Home</li>
 				<a href="account.php"><i class="fas fa-user-circle"></i>Account</a>
+				<a href="reports.php"><i class="fas fa-user-circle"></i>Reports</li>
 				<a href="nominates.php"><i class="fas fa-sign-out-alt"></i>Nominate</a>
 		        <a href="voting.php"><i class="fas fa-user-circle"></i>Voting</li>
                 <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
@@ -48,7 +49,7 @@ $stmt->close();
                 page. </p>
 		
             <table>
-                <form action="../Nominates/nominate.php" method="POST" onSubmit="return confirm('Are you sure?\n Only ONE vote per faculty member per position');">
+                <form action="../Nominates/nominate.php" method="POST" onSubmit="return confirm('Are you sure?\n Only ONE nomination per faculty member per position');">
                     <tr>
                         <td>Nominee Full Name:</td>
                         <td><input type = "text" name = "nomName" required></td>

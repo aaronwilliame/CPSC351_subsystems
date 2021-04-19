@@ -9,10 +9,10 @@
             $nomCommittee = $_POST['nomCommittee'];
             $Faculty_id = $_POST['id'];
 
-            $sql = "INSERT INTO nominates (nomName,nomSeat,nomCommittee,Faculty_id)
+            $sql = "INSERT INTO voting_results (nomName,nomSeat,nomCommittee,Faculty_id)
                VALUES ('$nomName','$nomSeat','$nomCommittee','$Faculty_id')";
             if (mysqli_query($conn, $sql)) {
-               echo "Your nomination has been counted successfully!";
+               echo "Your Vote has been counted successfully!";
             } else {
                echo "Error: " . $sql . ":-" . mysqli_error($conn);
             }
