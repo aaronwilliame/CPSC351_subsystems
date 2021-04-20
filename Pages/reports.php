@@ -10,11 +10,12 @@ if (!isset($_SESSION['loggedin'])) {
 include "../Backend/db_connect.php"; 
 
 // Get user info from DB
-$stmt = $conn->prepare('SELECT idMeetings, meetingDate, attendance, com_id, id FROM meetings, faculty WHERE id = ?' );
+$stmt = $conn->prepare('SELECT id, meetingDate FROM faculty, meetings WHERE id = ?');
 // In this case we can use the account ID to get the account info.
 $stmt->bind_param('i', $_SESSION['id']);
+$stmt->bind_param('i', $_SESSION['meetingDate']);
 $stmt->execute();
-$stmt->bind_result($idMeetings, $meetingDate, $attendance, $com_id, $id);
+$stmt->bind_result($id, $meetingDate);
 $stmt->fetch();
 $stmt->close();
 ?>
@@ -38,38 +39,32 @@ $stmt->close();
 			</div>
 		</nav>
 		<div class="content">
-			<h2>Reports Page</h2>
+			<h2>Reports Page
+
+			<div style="float: right">
+                    <img src="./Photos/Reports/reports.svg" alt="account" width=75px>
+                </div><br><br>
+			</h2>
 			<div>
 				<p>Summary of your Committee reports</p>
 				<table>
-			<tr>
-					<td>Username:</td>
+					<tr>
+						<td>Username:</td>
 						<td><?=$_SESSION['name']?></td>
 					</tr>
 					<tr>
-						<td>Meeting ID</td>
-						<td><?=$idMeetings?></td>
-					</tr>
-					<tr>
-						<td>Meeting</td>
+						<td>Meeting date</td>
 						<td><?=$meetingDate?></td>
 					</tr>
-					<tr>
-						<td>Did your ass attend?</td>
-						<td><?=$attendance?></td>
-					</tr>
-					<tr>
-						<td>Committee</td>
-						<td><?=$com_id?></td>
-					</tr>
-				
+
+					<?php
+							include "../Report/fullreport.php"; 
+					?>
 				</table>
 				
 			</div>
 			
 		</div>
-
-	
 	
 	</body>
 	 

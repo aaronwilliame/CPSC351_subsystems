@@ -1,7 +1,7 @@
 <html>
 <link href="../Styles/style.css" rel="stylesheet">
 <div class="content">
-This is the list of noms you ass
+This is the list of Current Nominations <br><br>
 <?php
 				// Check connection
 				if (mysqli_connect_errno())
@@ -14,7 +14,7 @@ This is the list of noms you ass
 				echo "<table border='1'>
 				<tr>
 				<th>Firstname</th>
-				<th>Lastname</th>
+				<th>Position</th>
 				<th>Committee</th>
 				</tr>";
 

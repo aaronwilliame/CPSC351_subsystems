@@ -42,11 +42,18 @@ $stmt->close();
 		</nav>
 
 		<div class="content">
-			<h2>Nominate a faculty member</h2>
+			<h2>Nominate a faculty member
+
+                <div style="float: right">
+                    <img src="./Photos/Nominate/team.svg" alt="account" width=75px>
+                </div><br><br>
+            </h2>
             <div>
 			    <p>Insert your nomination below, <?=$_SESSION['name']?>!
-                Only nominate when there is a position opening up. Please cheack the Committees
-                page. </p>
+                Only nominate when there is a position opening up.</p>
+
+                <p>Please cheack the Committees
+                page. (Coming Soon) </p>
 		
             <table>
                 <form action="../Nominates/nominate.php" method="POST" onSubmit="return confirm('Are you sure?\n Only ONE nomination per faculty member per position');">

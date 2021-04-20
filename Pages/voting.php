@@ -38,16 +38,25 @@ $stmt->close();
                 <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
 		</nav>
+
 		<div class="content">
-			<h2>Voting</h2>
-			<p>This is the voting page, <?=$_SESSION['name']?>!</p>
-
-
-			<?php
+			<h2>Voting
+                <div style="float: right">
+                    <img src="./Photos/Voting/voting.svg" alt="voting box" width=100px>
+                </div><br><br>
+            </h2>   
+			
+            <div>
+            This is the voting page, <?=$_SESSION['name']?>! <br><br>
+            <?php
 				include "../Vote/voteinfo.php"; 
 			?>
 			<br>
+        </div>
+			
+            <div class="content">
 			<table>
+            Vote here: <br><br>
                 <form action="../Vote/votes.php" method="POST" onSubmit="return confirm('Are you sure?\n Only ONE vote per faculty member per position');">
                     <tr>
                         <td>Nominee Full Name:</td>
@@ -67,13 +76,13 @@ $stmt->close();
                         <td><input type="text" name="id" value="<?php echo $id;?>" readonly="readonly"></td>    
                     </tr>
                     <tr>
-                     <td><input type = "submit" name = "submit" value = "Submit"><td>
+                     <td><input type = "submit" name = "submit" value = "Submit" onClick="history.back()"><td>
                     </tr>
                  </form>
-             </table>
 
+             </table>
+            
 		</div>
-		
 
 	
 	</body>
