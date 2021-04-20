@@ -10,11 +10,11 @@ if (!isset($_SESSION['loggedin'])) {
 include "../Backend/db_connect.php"; 
 
 // Get user info from DB
-$stmt = $conn->prepare('SELECT password, email, department FROM faculty WHERE id = ?');
+$stmt = $conn->prepare('SELECT id, email, department FROM faculty WHERE id = ?');
 // In this case we can use the account ID to get the account info.
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
-$stmt->bind_result($password, $email, $department);
+$stmt->bind_result($id, $email, $department);
 $stmt->fetch();
 $stmt->close();
 ?>
@@ -38,7 +38,14 @@ $stmt->close();
 			</div>
 		</nav>
 		<div class="content">
-			<h2>Profile Page</h2>
+			<h2>Profile Page
+
+			<div style="float: right">
+                    <img src="./Photos/Account/account.svg" alt="account" width=100px>
+                </div><br><br>
+
+
+			</h2>
 			<div>
 				<p>Your account details are below:</p>
 				<table>
@@ -46,21 +53,12 @@ $stmt->close();
 						<td>Username:</td>
 						<td><?=$_SESSION['name']?></td>
 					</tr>
-					<tr>
-						<td>Password:</td>
-						<td><?=$password?></td>
-					</tr>
-					<tr>
 						<td>Email:</td>
 						<td><?=$email?></td>
 					</tr>
                     <tr>
 						<td>department</td>
 						<td><?=$department?></td>
-					</tr>
-                    <tr>
-						<td>Next Meeting</td>
-						<td>BLAH BLAH BLAHHHH</td>
 					</tr>
 				</table>
 			</div>

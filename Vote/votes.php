@@ -13,6 +13,7 @@
                VALUES ('$nomName','$nomSeat','$nomCommittee','$Faculty_id')";
             if (mysqli_query($conn, $sql)) {
                echo "Your Vote has been counted successfully!";
+               echo""
             } else {
                echo "Error: " . $sql . ":-" . mysqli_error($conn);
             }
