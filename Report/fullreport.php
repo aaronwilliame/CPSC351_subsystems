@@ -5,16 +5,11 @@
 				echo "Failed to connect to MySQL: " . mysqli_connect_error();
 				}
 
-				$result = mysqli_query($conn,"SELECT * FROM meetings");
-                /*$result = mysqli_query($conn,"SELECT M.meetingDate, M.attendance, M.com_id, M.Faculty_id, F.id
-                                FROM meetings M, faculty F
-                                INNER JOIN M.Faculty_id
-                                ON M.Faculty_id = F.id
-                                ORDER BY M.meetingDate");*/ 
+				$sql = "SELECT * FROM meetings, faculty 
+					WHERE id = ". $_SESSION['id'] ."
+					AND Faculty_id = id";
 
-
-
-
+				$result = mysqli_query($conn, $sql);
 
 				echo "<table border='5'>
 				<tr>
@@ -36,6 +31,7 @@
 				echo "</table>";
 
 				mysqli_close($conn);
+		
 			?>
 </div>
 </html>

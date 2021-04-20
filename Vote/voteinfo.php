@@ -13,7 +13,7 @@ This is the list of Current Nominations <br><br>
 
 				echo "<table border='1'>
 				<tr>
-				<th>Firstname</th>
+				<th>Candidate</th>
 				<th>Position</th>
 				<th>Committee</th>
 				</tr>";

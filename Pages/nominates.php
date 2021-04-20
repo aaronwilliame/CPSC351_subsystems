@@ -52,7 +52,7 @@ $stmt->close();
 			    <p>Insert your nomination below, <?=$_SESSION['name']?>!
                 Only nominate when there is a position opening up.</p>
 
-                <p>Please cheack the Committees
+                <p>Please check the Committees
                 page. (Coming Soon) </p>
 		
             <table>

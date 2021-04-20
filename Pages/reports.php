@@ -13,7 +13,6 @@ include "../Backend/db_connect.php";
 $stmt = $conn->prepare('SELECT id, meetingDate FROM faculty, meetings WHERE id = ?');
 // In this case we can use the account ID to get the account info.
 $stmt->bind_param('i', $_SESSION['id']);
-$stmt->bind_param('i', $_SESSION['meetingDate']);
 $stmt->execute();
 $stmt->bind_result($id, $meetingDate);
 $stmt->fetch();
@@ -48,18 +47,11 @@ $stmt->close();
 			<div>
 				<p>Summary of your Committee reports</p>
 				<table>
-					<tr>
-						<td>Username:</td>
-						<td><?=$_SESSION['name']?></td>
-					</tr>
-					<tr>
-						<td>Meeting date</td>
-						<td><?=$meetingDate?></td>
-					</tr>
 
 					<?php
 							include "../Report/fullreport.php"; 
 					?>
+
 				</table>
 				
 			</div>

@@ -11,7 +11,6 @@ if (!isset($_SESSION['loggedin'])) {
 <html>
 	<head>
 		<meta charset="utf-8">
-       
 		<title>Home Page</title>
         <link href="../Styles/style.css" rel="stylesheet">
 	</head>
@@ -33,6 +32,7 @@ if (!isset($_SESSION['loggedin'])) {
 			<h2>Home Page</h2>
 			<p>Welcome back, <?=$_SESSION['name']?>!</p>
 		</div>
+		
         </div>
 	</body>
 </html>
