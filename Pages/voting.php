@@ -76,7 +76,7 @@ $stmt->close();
                         <td><input type="text" name="id" value="<?php echo $id;?>" readonly="readonly"></td>    
                     </tr>
                     <tr>
-                     <td><input type = "submit" name = "submit" value = "Submit" onClick="history.back()"><td>
+                     <td><input type = "submit" name = "submit" value = "Submit"><td>
                     </tr>
                  </form>
 
